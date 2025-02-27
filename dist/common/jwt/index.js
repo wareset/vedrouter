@@ -1,0 +1,2 @@
+/* eslint-disable */
+const e=require("../base64/index.js");function r(r){return e.encode(r).replace(/\+/g,"-").replace(/\//g,"_").replace(/[=]+$/g,"")}exports.base64ToUtf8=function(r){return e.decode(r.replace(/-/g,"+").replace(/_/g,"/")+(3===(t=4-r.length%4)?"===":2===t?"==":1===t?"=":""));var t},exports.create=function({verifier:e,password:t="",payload:a={},header:n={}}){var o=r(JSON.stringify({alg:"HS256",typ:"JWT",...n}))+"."+r(JSON.stringify(a));return o+"."+r(e(o+t))},exports.utf8ToBase64=r;

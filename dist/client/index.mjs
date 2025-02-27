@@ -1,0 +1,2 @@
+/* eslint-disable */
+function e(e){if(!e.defaultPrevented&&1===(null==e.which?e.button:e.which)&&!(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)){for(var t=e.target;t&&"a"!==t.localName;)t=t.parentNode;if(t&&t.href){var a="string"!=typeof t.href,r=a?t.href.baseVal:t.href;if(r!==location.href){if(!(a?t.target.baseVal:t.target)&&!t.hasAttribute("download")&&"external"!==t.getAttribute("rel")){var l=new URL(r);l.pathname===location.pathname&&l.search===location.search||console.log("TODO")}}else location.hash||e.preventDefault()}}}export{e as handle_click};

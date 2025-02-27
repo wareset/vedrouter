@@ -1,0 +1,77 @@
+{
+  "name": "vedrouter",
+  "version": "0.1.0",
+  "description": "vedrouter",
+  "keywords": [
+    "vedrouter"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/wareset/vedrouter#readme",
+  "bugs": {
+    "url": "https://github.com/wareset/vedrouter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wareset/vedrouter.git"
+  },
+  "author": "rease <cftcview@gmail.com>",
+  "main": "dist/index",
+  "module": "dist/index.mjs",
+  "types": "types/index.d.ts",
+  "files": [
+    "README.md",
+    "dist/**/*",
+    "types/**/*"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./types/index.d.ts"
+    },
+    "./client": {
+      "import": "./dist/client/index.mjs",
+      "require": "./dist/client/index.js",
+      "types": "./types/client/index.d.ts"
+    },
+    "./common": {
+      "import": "./dist/common/index.mjs",
+      "require": "./dist/common/index.js",
+      "types": "./types/common/index.d.ts"
+    },
+    "./common/base64": {
+      "import": "./dist/common/base64/index.mjs",
+      "require": "./dist/common/base64/index.js",
+      "types": "./types/common/base64.d.ts"
+    },
+    "./common/jwt": {
+      "import": "./dist/common/jwt/index.mjs",
+      "require": "./dist/common/jwt/index.js",
+      "types": "./types/common/jwt.d.ts"
+    },
+    "./common/path": {
+      "import": "./dist/common/path/index.mjs",
+      "require": "./dist/common/path/index.js",
+      "types": "./types/common/path.d.ts"
+    },
+    "./common/query": {
+      "import": "./dist/common/query/index.mjs",
+      "require": "./dist/common/query/index.js",
+      "types": "./types/common/query.d.ts"
+    },
+    "./common/url": {
+      "import": "./dist/common/url/index.mjs",
+      "require": "./dist/common/url/index.js",
+      "types": "./types/common/url.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "dester -m --out=dist",
+    "dev": "dester -mw --out=dist"
+  },
+  "devDependencies": {
+    "dester": "1.0.x",
+    "typescript": "5.7.2"
+  }
+}
